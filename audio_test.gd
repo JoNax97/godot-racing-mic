@@ -7,9 +7,8 @@ onready var audio_stream_player := $AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	return
 	bus_index = AudioServer.get_bus_index("Microphone")
 	
 func _process(delta):
-	var volume = audio_stream_player.volume_db
+	var volume = db2linear(AudioServer.get_bus_peak_volume_left_db(bus_index, 0))
 	print(volume)
