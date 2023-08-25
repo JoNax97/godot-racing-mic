@@ -21,11 +21,12 @@ func _process(delta):
 	
 	unit_offset = pos_normalized
 	
-	var volume = db2linear(AudioServer.get_bus_peak_volume_left_db(bus_index, 0))
+	var volumen = db2linear(AudioServer.get_bus_peak_volume_left_db(bus_index, 0))
 	
-	position = volume * speed * delta
+	var current_speed = volumen * speed * delta
+	position += current_speed
 	
-	Label.text
+	label_3d.text = str(current_speed)
 	
 	
 

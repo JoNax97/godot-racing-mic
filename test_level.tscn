@@ -43,11 +43,12 @@ path_joined = true
 
 [node name="RacingCar" parent="Path" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71487, 0, 0.171417 )
+speed = 4.0
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 9.00821, 0 )
+transform = Transform( 0.986227, -0.163834, -0.0226887, 0.0250804, 0.0125449, 0.999607, -0.163484, -0.986408, 0.0164811, -2.06615, 0.175238, 0.600874 )
 projection = 1
-size = 10.0
+size = 2.64082
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.725795, 0 )
