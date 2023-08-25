@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://PathFollow.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleMesh" id=2]
+radius = 0.1
+mid_height = 0.1
+
+[sub_resource type="AudioStreamMicrophone" id=3]
+
+[node name="RacingCar" type="PathFollow"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0182, 0.790359, 0.984262 )
+script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.989272, -0.134895, 0.0560829, -0.0712362, -0.110266, 0.991346, -0.127543, -0.984706, -0.118693, 0.0149925, 1.69476, -0.082003 )
+projection = 1
+size = 2.07713
+
+[node name="Label3D" type="Label3D" parent="Camera"]
+transform = Transform( 0.960193, 0.210697, -0.183408, -0.260986, 0.910728, -0.320101, 0.0995901, 0.355225, 0.929461, -0.813376, -0.441601, -1.62699 )
+modulate = Color( 0, 0, 0, 1 )
+outline_modulate = Color( 1, 0, 0, 1 )
+text = "VELOCIDAD:
+
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource( 3 )
+autoplay = true
+bus = "Microphone"
