@@ -9,13 +9,19 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "EditorVCSInterface",
+"base": "",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
+}, {
+"base": "Area",
+"class": "SpeedArea",
+"language": "GDScript",
+"path": "res://SpeedArea.gd"
 } ]
 _global_script_class_icons={
-"GitAPI": ""
+"GitAPI": "",
+"SpeedArea": ""
 }
 
 [application]
@@ -27,6 +33,10 @@ config/icon="res://icon.png"
 [audio]
 
 enable_audio_input=true
+
+[autoload]
+
+GlobalData="*res://GlobalData.gd"
 
 [editor]
 
