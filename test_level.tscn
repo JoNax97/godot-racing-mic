@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Tilesets/Calle.png" type="Texture" id=1]
 [ext_resource path="res://track.gd" type="Script" id=2]
+[ext_resource path="res://racing_car.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Curve3D" id=1]
 _data = {
@@ -39,6 +40,9 @@ path_local = false
 path_continuous_u = true
 path_u_distance = 1.0
 path_joined = true
+
+[node name="RacingCar" parent="Path" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71487, 0, 0.171417 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 9.00821, 0 )
