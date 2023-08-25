@@ -22,6 +22,7 @@ texture = ExtResource( 2 )
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0.0149927, 3.59476, 1.518 )
 projection = 1
+current = true
 size = 4.1
 
 [node name="Label3D" type="Label3D" parent="Camera"]
