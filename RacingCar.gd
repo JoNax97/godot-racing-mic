@@ -17,16 +17,19 @@ func _ready():
 	
 func _process(delta):
 	
-	var pos_normalized = position/length
-	
-	unit_offset = pos_normalized
-	
 	var volumen = db2linear(AudioServer.get_bus_peak_volume_left_db(bus_index, 0))
 	
-	var current_speed = volumen * speed * delta
-	position += current_speed
+	var current_speed = volumen * speed 
+	position += current_speed * delta
+	
+	var pos_normalized = position/length
+	unit_offset = pos_normalized
 	
 	label_3d.text = str(current_speed)
+	
+	if current_speed > GlobalData.max_speed:
+		#perdes
+		pass
 	
 	
 

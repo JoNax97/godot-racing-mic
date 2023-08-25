@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/auto verde.png-720cca65cb8e4288840788ad76fcde08.stex"
+path="res://.import/arboll.png-9ab5879a28db26b7e148cb06b5d4e4e1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Autos/auto verde.png"
-dest_files=[ "res://.import/auto verde.png-720cca65cb8e4288840788ad76fcde08.stex" ]
+source_file="res://Assets/Objects/arboll.png"
+dest_files=[ "res://.import/arboll.png-9ab5879a28db26b7e148cb06b5d4e4e1.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

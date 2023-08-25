@@ -1,24 +1,28 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://PathFollow.gd" type="Script" id=1]
-
-[sub_resource type="CapsuleMesh" id=2]
-radius = 0.1
-mid_height = 0.1
+[ext_resource path="res://RacingCar.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Autos/auto1.png" type="Texture" id=2]
 
 [sub_resource type="AudioStreamMicrophone" id=3]
 
+[sub_resource type="CapsuleShape" id=4]
+radius = 0.1
+height = 0.1
+
 [node name="RacingCar" type="PathFollow"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0182, 0.790359, 0.984262 )
+rotation_mode = 1
 script = ExtResource( 1 )
+speed = 25.0
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-mesh = SubResource( 2 )
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 2.2, 0, 0, 0, -4.37114e-08, 1, 0, -2.2, -9.61651e-08, 0.0363886, 0, 0.01779 )
+texture = ExtResource( 2 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.989272, -0.134895, 0.0560829, -0.0712362, -0.110266, 0.991346, -0.127543, -0.984706, -0.118693, 0.0149925, 1.69476, -0.082003 )
+transform = Transform( -1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0.0149927, 3.59476, 1.518 )
 projection = 1
-size = 2.07713
+size = 4.1
 
 [node name="Label3D" type="Label3D" parent="Camera"]
 transform = Transform( 0.960193, 0.210697, -0.183408, -0.260986, 0.910728, -0.320101, 0.0995901, 0.355225, 0.929461, -0.813376, -0.441601, -1.62699 )
@@ -32,3 +36,8 @@ text = "VELOCIDAD:
 stream = SubResource( 3 )
 autoplay = true
 bus = "Microphone"
+
+[node name="player_car_collisions" type="KinematicBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="player_car_collisions"]
+shape = SubResource( 4 )

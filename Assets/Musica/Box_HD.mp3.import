@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Box_HD.mp3-91b7af11130898428db035406ef35472.mp3str"
+
+[deps]
+
+source_file="res://Assets/Musica/Box_HD.mp3"
+dest_files=[ "res://.import/Box_HD.mp3-91b7af11130898428db035406ef35472.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
